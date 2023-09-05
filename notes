@@ -1,0 +1,51 @@
+JDBC CONTACTS EXAMPLE
+
+A user can view a list of contacts
+	1. Create a contacts table migration and seeder file;
+	2. Run migration and seeder
+
+	        -DAO Directory
+	        -JDC Directory
+	        -Models Directory
+	        -Database Directory
+	        -Controller Directory
+	Create an SQL FILE, inside Database Directory,
+	- USE DB
+	- CREATE TABLE
+	- CREATE A FILE (insert the info)
+
+	3. Create a Contact java bean
+	CREATE A CLASS INSIDE OF THE MODLES DIRECTORY, IMPLEMENTS SERIALIZABLE
+	(NAME CONTACT.JAVA)
+	        - PRIVATE STRING NAME
+	        - PRIVATE STRING PHONENUMBER
+	        - PRIVATE LONG ID
+	        - GETTERS, SETTER AND CONSTRUCTOR
+
+    4. Create a contacts/index.jsp - view for listing out contacts
+
+
+	5. Create a ContactIndexServlet - return a view to display all contacts (hard code list of contacts for now)
+	CREATE A SERVLET INSIDE OF THE CONTROLLER DIRECTORY
+	CREATE A JSP
+
+	6. Create a Contacts interface to require an “all” method
+	7. Implement the Contacts interface in the ListContactsDao
+
+        Create an interface names contact
+        - CRATE AN ARRAY 'LIST<CONTACT>ALL'
+    INSIDE DAO CREATE A CLASS 'LIST CONTACT DAO'
+
+	8. Refactor DaoFactory to return a Contacts DAO and use in ContactIndexServlet
+	9. Implement the Contacts interface in the MySQLContactsDao
+   10. Refactor the DaoFactory to use the MySQLContactsDAO
+
+
+   STEP ONE COMPLETED
+   STEP TWO COMPLETED
+
+    CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'password';
+
+
+   STEP ONE COMPLETED
+   STEP TWO COMPLETED
