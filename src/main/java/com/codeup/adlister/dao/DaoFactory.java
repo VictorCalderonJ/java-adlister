@@ -1,8 +1,11 @@
 package com.codeup.adlister.dao;
 
+import java.sql.Connection;
+
 public class DaoFactory {
     private static Ads adsDao;
-    private static Config config = new Config();
+    private static Users userDao;
+    private static final config config = new config();
 
     public static Ads getAdsDao() {
         if (adsDao == null) {
@@ -10,4 +13,13 @@ public class DaoFactory {
         }
         return adsDao;
     }
+
+    
+    public static Users getUsersDao() {
+        if (userDao == null){
+            userDao = new MySQLUsersDao(config);
+        }
+        return userDao;
+    }
+    
 }
